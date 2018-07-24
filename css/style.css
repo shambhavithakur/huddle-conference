@@ -379,8 +379,8 @@ Styling
     display: none;
 }
 
-.nav-fixed .logo .border{
-    opacity: 0; 
+.nav-fixed .logo .border {
+    opacity: 0;
     display: none;
 }
 
@@ -394,7 +394,8 @@ button span {
     display: block;
 }
 
-.open-button, .close-button {
+.open-button,
+.close-button {
     line-height: 0;
     text-align: center;
     width: 64px;
@@ -416,9 +417,10 @@ button span {
     transition: all .2s ease-in-out;
 }
 
-.open-button{
+.open-button {
     display: none;
 }
+
 .nav-fixed .open-button {
     display: inline-block;
 }
@@ -462,17 +464,20 @@ button span {
     top: 6.4px;
 }
 
-.open-button.open-list .bar1, .close-button .bar1 {
+.open-button.open-list .bar1,
+.close-button .bar1 {
     top: 0;
     transform-origin: 50% 50%;
     transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.open-button.open-list .bar2,.close-button .bar2 {
+.open-button.open-list .bar2,
+.close-button .bar2 {
     background-color: transparent;
 }
 
-.open-button.open-list .bar3, .close-button .bar3 {
+.open-button.open-list .bar3,
+.close-button .bar3 {
     top: 0;
     transform-origin: 50% 50%;
     transform: rotate3d(0, 0, 1, -45deg);
@@ -514,17 +519,20 @@ button span {
     justify-content: space-between;
     padding: 1rem 2rem;
 }
-.navlist-navbar .logo{
+
+.navlist-navbar .logo {
     padding: 0;
     margin: 0;
     border-bottom: none;
     animation: none;
 }
-.navlist-navbar img{
-        width: auto;
-        height: 64px;
-        margin: 0;
+
+.navlist-navbar img {
+    width: auto;
+    height: 64px;
+    margin: 0;
 }
+
 .header-navlist {
     display: flex;
     justify-content: center;
@@ -720,7 +728,8 @@ Media queries
 -----------------------------------------------*/
 
 @media screen and (min-width: 1241px) {
-    .nav-container, .navlist-navbar,
+    .nav-container,
+    .navlist-navbar,
     .header-navlist,
     .primary-info,
     .close-button-container {
@@ -731,7 +740,7 @@ Media queries
     .nav-container {
         padding: 2rem 0 0;
     }
-    .navlist-navbar{
+    .navlist-navbar {
         padding: 1rem 0;
     }
     .close-button-container {
@@ -743,7 +752,7 @@ Media queries
     }
 }
 
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 880px) {
     body {
         font-size: 18px;
     }
@@ -766,6 +775,25 @@ Media queries
     }
     .header-navlist a {
         font-size: 28px;
+    }
+    .primary-info p:first-of-type {
+        font-size: 21px;
+        letter-spacing: .05em;
+    }
+    .h1-initial {
+        font-size: 28px;
+    }
+    .h1-big {
+        font-size: 108px;
+    }
+    .primary-info h2 {
+        font-size: 18px;
+    }
+    .schedule-loc>h2>.header-link {
+        font-size: 17px;
+    }
+    h2.organized-by>span {
+        font-size: 16px;
     }
 }
 
