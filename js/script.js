@@ -4,7 +4,6 @@ var navBarNotFixed = document.querySelector('.navbar');
 var navLogoContainer = navBarNotFixed.querySelector('.nav-container > .logo-container');
 var navListOpen = document.querySelector('.header-navlist-container');
 var primaryInfoP = document.querySelector('.primary-info > p');
-var geometricSpans = document.querySelectorAll('.geometric');
 var primaryInfoSpans = document.querySelectorAll('.primary-info > h1 > span');
 
 
@@ -19,6 +18,14 @@ if (accessedOrNot) {
     primaryInfoSpans[i].classList.remove('opacity');
     primaryInfoSpans[i].classList.remove('slide-in-from-bottom');
   }
+  document.querySelector('.geometric1').classList.remove('opacity');
+  document.querySelector('.geometric1').style.animationName = 'none';
+  document.querySelector('.geometric2').classList.remove('opacity');
+  document.querySelector('.geometric2').style.animationName = 'none';
+  document.querySelector('.geometric3').classList.remove('opacity');
+  document.querySelector('.geometric3').style.animationName = 'none';
+  document.querySelector('.geometric4').classList.remove('opacity');
+  document.querySelector('.geometric4').style.animationName = 'none';
 }
 
 // Toggler

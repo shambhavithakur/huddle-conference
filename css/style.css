@@ -995,10 +995,10 @@ header {
     }
 } */
 
-/* Shape 5 */
+/* Shape 4 */
 
 @media (min-width: 880px) {
-    .geometric5 {
+    .geometric4 {
         width: 33.33333%;
         height: 88px;
         bottom: 0;
@@ -1108,7 +1108,7 @@ header {
     .geometric1,
     .geometric2,
     .geometric3,
-    .geometric5 {
+    .geometric4 {
         animation-name: slide-in-from-left;
     }
     .geometric2 {
@@ -1117,7 +1117,7 @@ header {
     .geometric3 {
         animation-delay: 2.4s;
     }
-    .geometric5 {
+    .geometric4 {
         animation-delay: 2.4s;
     }
     .primary-info>p:first-of-type {
