@@ -754,9 +754,13 @@ h2.organized-by > span {
 }
 .header-link.schedule::after,
 .header-link.location::after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -webkit-transform: scaleX(0.95);
+  transform: scaleX(0.95);
+  transform-origin: bottom left;
   background-color: rgba(4, 4, 4, 0.1);
+}
+.header-link.location::after {
+  transform-origin: bottom right;
 }
 .schedule-loc > h2 > .header-link:hover,
 .schedule-loc > h2 > .header-link:focus {
@@ -833,11 +837,13 @@ h2.organized-by > span {
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+.get-tickets:focus > span:first-child,
 .get-tickets:hover > span:first-child {
   -webkit-transform: translate3d(-10px, 2px, 0);
   transform: translate3d(-10px, 2px, 0);
   padding-left: 2em;
 }
+.get-tickets:focus > span:last-child,
 .get-tickets:hover > span:last-child {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -848,7 +854,63 @@ h2.organized-by > span {
 /* Main */
 
 main {
-  margin-top: 230px;
+  margin-top: 190px;
+}
+.text-link {
+  color: #56317a;
+  font-weight: bold;
+}
+.text-link:focus,
+.text-link:hover {
+  border-bottom: 1px dotted #56317a;
+}
+.section__container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.pitch {
+  z-index: 2;
+  text-align: center;
+  margin: 0 auto;
+}
+.elaborate {
+  margin-top: 2em;
+}
+.elaborate > h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.descriptions__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.descriptions__graphic {
+  display: flex;
+}
+.descriptions__graphic.small-screens {
+  display: none;
+}
+.descriptions__graphic_circle {
+  background: #3d99be;
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 30px;
+}
+.descriptions__graphic_circle2 {
+  background: #3ab5b0;
+}
+.descriptions__graphic_circle3 {
+  background: #56317a;
 }
 
 /*-----------------------------------------------
@@ -937,6 +999,10 @@ Media queries
   .ticket-availability {
     font-size: 16px;
   }
+  .section__container {
+    padding: 0 4rem;
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -944,7 +1010,50 @@ Media queries
     padding: 4rem 0;
   }
 }
-
+@media screen and (min-width: 651px) {
+  main {
+    margin-top: 230px;
+  }
+}
+@media screen and (min-width: 611px) {
+  .pitch {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 575px) {
+  .descriptions__row {
+    flex-direction: row;
+  }
+  .descriptions__text {
+    width: 50%;
+  }
+  .descriptions__graphic {
+    width: 30%;
+  }
+  .descriptions__graphic1 {
+    justify-content: flex-end;
+    padding-right: 1.5em;
+  }
+  .descriptions__graphic2 {
+    justify-content: flex-start;
+    padding-left: 1em;
+  }
+  .descriptions__graphic3 {
+    justify-content: flex-end;
+    padding-right: 1.5em;
+  }
+}
+@media screen and (max-width: 574px) {
+  .descriptions__graphic {
+    margin-bottom: 0.8em;
+  }
+  .descriptions__graphic.small-screens {
+    display: block;
+  }
+  .descriptions__graphic.big-screens {
+    display: none;
+  }
+}
 @media screen and (max-width: 500px) {
   .header-navlist {
     display: block;
@@ -1115,30 +1224,6 @@ header {
     height: 88px;
     bottom: 0;
     background: rgba(238, 231, 245, 0.1);
-  }
-}
-
-/* Photos */
-
-@media screen and (min-width: 670px) {
-  .photo {
-    position: relative;
-    z-index: 102;
-    width: 300px;
-    height: 200px;
-    border: 8px solid #e6f7f6;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-  }
-  .photo1 {
-    background: url(../img/ski.jpg) center center / cover no-repeat;
-    margin-top: -400px;
-    left: 50%;
-    margin-left: -644px;
-    -webkit-transform: rotate(-12deg) translateX(50px);
-    transform: rotate(-12deg) translateX(50px);
-    -webkit-transform-origin: 50% 20%;
-    transform-origin: 50% 20%;
   }
 }
 
