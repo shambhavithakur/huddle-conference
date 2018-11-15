@@ -353,8 +353,8 @@ Styling
   margin-left: -6px;
 }
 
-.logo-container a:hover .logo,
-.logo-container a:focus .logo {
+.logo-container a:focus .logo,
+.logo-container a:hover .logo {
   opacity: 1;
 }
 
@@ -388,8 +388,8 @@ Styling
   transition: transform 0.2s ease-in-out;
 }
 
-.nav-fixed a:hover .logo,
-.nav-fixed a:focus .logo {
+.nav-fixed a:focus .logo,
+.nav-fixed a:hover .logo {
   -webkit-transform: scale3d(0.88, 0.88, 0.88);
   transform: scale3d(0.88, 0.88, 0.88);
 }
@@ -444,10 +444,10 @@ button span {
   display: inline-block;
 }
 
-.open-button:hover,
 .open-button:focus,
-.close-button:hover,
-.close-button:focus {
+.open-button:hover,
+.close-button:focus,
+.close-button:hover {
   -webkit-transform: scale3d(0.88, 0.88, 0.88);
   transform: scale3d(0.88, 0.88, 0.88);
   color: #2c708b;
@@ -509,8 +509,8 @@ button span {
   transform: rotate3d(0, 0, 1, -45deg);
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:focus,
+.close-button:hover {
   -webkit-transform: scale3d(0.88, 0.88, 0.88);
   transform: scale3d(0.88, 0.88, 0.88);
   border-color: #fff;
@@ -569,8 +569,8 @@ button span {
   transition: all 0.2s ease-in-out;
 }
 
-.navlist-navbar a:hover .logo,
-.navlist-navbar a:focus .logo {
+.navlist-navbar a:focus .logo,
+.navlist-navbar a:hover .logo {
   -webkit-transform: scale3d(0.88, 0.88, 0.88);
   transform: scale3d(0.88, 0.88, 0.88);
 }
@@ -777,37 +777,61 @@ h2.organized-by > span {
 .organized-by .header-link:active::after {
   background-color: hsla(0, 0%, 100%, 0.5);
 }
-.tickets-container {
+.button-container {
   display: flex;
 }
-.get-tickets {
+.link-button {
   display: flex;
   margin: 0.65em auto 1em;
   padding: 1em 2em;
-  border: 2px solid #56317a;
+  border: 2px solid;
+  border-color: #56317a;
   border-radius: 999em;
-  background: #56317a;
   color: inherit;
-  transition: scale 0.4s ease-in;
+  transition: all 0.4s ease-in;
   box-shadow: 0 2px 4px -1px rgba(128, 118, 128, 0.3);
 }
-.get-tickets:focus,
-.get-tickets:hover {
-  transform: scale(0.95);
+.get-tickets,
+.participate-trainers-talk {
+  background: #56317a;
 }
-.get-tickets > span:first-child {
+.peruse-schedule {
+  background: transparent;
+  border-color: rgba(243, 251, 251, 0.75);
+}
+.link-button > span:first-child {
   display: inline-block;
-  background-image: url(../img/ticket.png);
   height: 26px;
   width: auto;
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 2em;
 }
-.get-tickets > span:last-child {
+.get-tickets > span:first-child {
+  background-image: url(../img/ticket.png);
+}
+.peruse-schedule > span:first-child {
+  background-image: url(../img/timetable.png);
+}
+.participate-trainers-talk > span:first-child {
+  background-image: url(../img/training.png);
+}
+.link-button > span:last-child {
   display: inline-block;
   vertical-align: middle;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(243, 251, 251, 0.75);
+}
+.link-button:focus,
+.link-button:hover {
+  transform: scale(0.95);
+}
+.peruse-schedule:focus,
+.peruse-schedule:hover {
+  border-color: rgba(243, 251, 251, 0.75);
+}
+.link-button:focus > span:last-child,
+.link-button:hover > span:last-child {
+  color: rgba(243, 251, 251, 0.7);
 }
 .ticket-availability {
   font-size: 14px;
@@ -825,7 +849,7 @@ main {
 .text-link:hover {
   border-bottom: 1px dotted #56317a;
 }
-.section__container {
+.section1__container {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -873,23 +897,199 @@ main {
 .descriptions__graphic_circle3 {
   background: #56317a;
 }
+.section2__container {
+  position: relative;
+}
+.section2__content {
+  z-index: 50;
+  position: relative;
+  padding: 10em 2rem 0;
+  text-align: center;
+  color: #f3fbfb;
+}
+.section2__content > h2 {
+  color: #f3fbfb;
+}
+table {
+  table-layout: fixed;
+  max-width: 630px;
+  margin: 0 auto;
+}
+.row1 > td:nth-child(1) {
+  width: 10%;
+}
+.row1 > td:nth-child(2) {
+  width: 80%;
+}
+thead > tr {
+  background: rgba(85, 53, 125, 0.8);
+}
+th {
+  text-transform: uppercase;
+  color: #f3fbfb;
+}
+th,
+tr > td:first-child {
+  font-weight: 900;
+}
+th,
+td {
+  padding: 1em;
+  text-align: left;
+  border: 2.5px solid #f3fbfb;
+}
+.section2__buttons {
+  padding-top: 1.5rem;
+}
+.section2__geometric {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transform: skewY(6deg);
+  transform: skewY(6deg);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  position: absolute;
+  z-index: 1;
+  margin-top: 2em;
+  background: linear-gradient(
+    to left,
+    rgba(58, 181, 176, 1) 0%,
+    rgba(61, 153, 190, 1) 31%,
+    rgba(86, 49, 122, 1) 100%
+  );
+}
+
+.section3 {
+  margin-top: 40px;
+  padding: 100px 2rem 0;
+  text-align: center;
+}
+footer {
+  margin-top: 135px;
+}
+footer,
+.footer__container {
+  position: relative;
+}
+.footer__content {
+  position: relative;
+  padding: 0 2rem 2rem;
+  text-align: center;
+  color: #f3fbfb;
+  z-index: 50;
+  background: linear-gradient(
+    to left,
+    rgba(58, 181, 176, 1) 0%,
+    rgba(61, 153, 190, 1) 31%,
+    rgba(86, 49, 122, 1) 100%
+  );
+}
+.footer__content a {
+  color: rgba(243, 251, 251, 0.75);
+  opacity: 1;
+}
+.footer__content a:focus,
+.footer__content a:hover {
+  opacity: 0.7;
+}
+.footer-logo__container.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo__container .logo p {
+  color: rgba(243, 251, 251, 0.75);
+}
+.footer-logo__container .logo {
+  border-bottom-color: rgba(243, 251, 251, 0.75);
+}
+.footer-logo__container .border {
+  background-color: rgba(243, 251, 251, 0.75);
+}
+.footer-logo__container .logo {
+  opacity: 1;
+}
+.footer-logo__container a:focus .logo,
+.footer-logo__container a:hover .logo {
+  opacity: 0.7;
+}
+.footer__location,
+.footer__nav > ul,
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+}
+.footer__credits {
+  padding-top: 2em;
+  color: rgba(243, 251, 251, 0.75);
+}
+.footer__location > p {
+  color: rgba(243, 251, 251, 0.75);
+}
+.footer__geometric {
+  width: 100%;
+  height: 100%;
+  display: block;
+  bottom: 0%;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: bottom left;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(
+    to left,
+    rgba(58, 181, 176, 1) 0%,
+    rgba(61, 153, 190, 1) 31%,
+    rgba(86, 49, 122, 1) 100%
+  );
+}
+.footer__rectangle {
+  width: 100%;
+  height: 50%;
+  right: 0;
+  top: 80%;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(
+    to left,
+    rgba(58, 181, 176, 1) 0%,
+    rgba(61, 153, 190, 1) 31%,
+    rgba(86, 49, 122, 1) 100%
+  );
+}
 
 /*-----------------------------------------------
 Media queries
 -----------------------------------------------*/
-
+@media screen and (min-width: 1720px) {
+  .geometric-container {
+    transform: skewY(-10deg) !important;
+  }
+  .section3 {
+    padding-top: 200px;
+  }
+}
 @media screen and (min-width: 1241px) {
   .nav-container,
   .navlist-navbar,
   .header-navlist,
   .primary-info,
-  .close-button-container {
+  .close-button-container,
+  .section1__container {
     margin: 0 auto;
     max-width: 1241px;
     width: 90% !important;
   }
   .nav-container {
     padding: 2rem 0 0;
+  }
+  .footer-logo__container.nav-container {
+    padding-bottom: 2rem;
   }
   .navlist-navbar {
     padding: 1rem 0;
@@ -950,24 +1150,63 @@ Media queries
   .schedule-loc > h2:last-of-type > span {
     padding-left: 1.325rem;
   }
-  .get-tickets {
+  .link-button {
     padding: 1em auto;
   }
-  .get-tickets > span:first-child {
+  .link-button > span:first-child {
     height: 28px;
   }
   .ticket-availability {
     font-size: 16px;
   }
-  .section__container {
+  .section1__container {
     padding: 0 4rem;
     flex-direction: row;
+  }
+  .section3 {
+    padding-top: 150px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .header-navlist {
     padding: 4rem 0;
+  }
+  .section2__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section2__buttons > .button-container:first-child {
+    margin-right: 0.5em;
+  }
+  .section2__buttons > .button-container:last-child {
+    margin-left: 0.5em;
+  }
+  .footer__credits {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__credits > small:not(:last-child) {
+    margin-right: 1em;
+  }
+  .footer__credits > small + small::before {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: auto;
+    left: auto;
+    font-weight: 400;
+    margin-left: -1.25em;
+    content: "•";
+    opacity: 1;
+    color: rgba(243, 251, 251, 0.75);
+    vertical-align: top;
+    opacity: 0.7;
+  }
+  .footer__credits > small + small {
+    margin-left: 1em;
   }
 }
 @media screen and (min-width: 651px) {
@@ -976,8 +1215,13 @@ Media queries
   }
 }
 @media screen and (min-width: 611px) {
-  .pitch {
+  .pitch,
+  .section3 {
     max-width: 600px;
+  }
+  .section3 {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 575px) {
@@ -1002,6 +1246,38 @@ Media queries
     justify-content: flex-end;
     padding-right: 1.5em;
   }
+  .footer__location,
+  .footer__nav > ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__location > p + p,
+  .footer__nav > ul > li + li {
+    margin-left: 1em;
+  }
+  .footer__location > p:first-child,
+  .footer__nav > ul > li:not(:last-child) {
+    margin-right: 1em;
+  }
+  .footer__location > p + p::before,
+  .footer__nav > ul > li + li::before {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: auto;
+    left: auto;
+    font-weight: 400;
+    margin-left: -1.25em;
+    content: "•";
+    opacity: 1;
+    color: rgba(243, 251, 251, 0.75);
+    vertical-align: top;
+    opacity: 0.7;
+  }
+  .footer__nav > ul > li + li::before {
+    content: "|";
+  }
 }
 @media screen and (max-width: 574px) {
   .descriptions__graphic {
@@ -1021,7 +1297,17 @@ Media queries
     padding-left: 2rem;
   }
 }
-
+@media screen and (max-width: 366px) {
+  footer small {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 364px) {
+  .peruse-schedule > span:first-child,
+  .participate-trainers-talk > span:first-child {
+    display: none;
+  }
+}
 /*-----------------------------------------------
 Geometric shapes
 -----------------------------------------------*/
@@ -1032,7 +1318,7 @@ Geometric shapes
 
 .geometric-container {
   width: 100%;
-  height: 125%;
+  height: 128%;
   top: 0;
   left: 0;
   overflow: hidden;

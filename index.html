@@ -170,9 +170,9 @@
             >
           </h2>
           <div
-            class="tickets-container opacity animation-common slide-in-from-bottom"
+            class="button-container tickets-container opacity animation-common slide-in-from-bottom"
           >
-            <a class="get-tickets" href="">
+            <a class="link-button get-tickets" href="">
               <span class="ticket-icon"></span> <span>Get tickets*</span>
             </a>
           </div>
@@ -192,7 +192,7 @@
     </div>
     <main>
       <section class="section1">
-        <div class="section__container section1__container">
+        <div class="section1__container">
           <div class="pitch">
             <h2>#Huddle1 Is for You</h2>
             <p>
@@ -267,111 +267,122 @@
         </div>
       </section>
       <section class="section2">
-        <h2>The Schedule</h2>
-        <p>
-          <span>Day 1</span>: Registration, workshops, and team-building
-          activities
-        </p>
-        <p>
-          <span>Day 2</span>: Inspiring talks interspersed with fun activities
-        </p>
-        <p>
-          <span>Day 3</span>: Inspiring talks and fun activities, followed by a
-          magnificent closing ceremony
-        </p>
-        <button>Peruse the detailed schedule</button>
-        <button>Get tickets</button>
+        <div class="section2__container">
+          <div class="section2__content">
+            <h2>The Schedule</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Events</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row1">
+                  <td>Day1</td>
+                  <td>Registration, workshops, and team-building activities</td>
+                </tr>
+                <tr>
+                  <td>Day2</td>
+                  <td>Inspiring talks interspersed with fun activities</td>
+                </tr>
+                <tr>
+                  <td>Day3</td>
+                  <td>
+                    Inspiring talks and fun activities, followed by a
+                    magnificent closing ceremony
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="section2__buttons">
+              <div class="button-container">
+                <a class="link-button peruse-schedule" href="">
+                  <span class="schedule-icon"></span>
+                  <span>Peruse the detailed schedule</span>
+                </a>
+              </div>
+              <div class="button-container">
+                <a class="link-button get-tickets" href="">
+                  <span class="ticket-icon"></span> <span>Get tickets</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="section2__geometric"></div>
+        </div>
       </section>
       <section class="section3">
-        <h2>The Venue</h2>
-        <p>
-          The Intrepid is an all-inclusive resort located near the beach in
-          Palolem. It offers a state-of-the art infrastructure, options for
-          indoor and outdoor activities, and varied, highly-rated dining
-          choices.
-        </p>
-        <p>
-          The public-transportation service in Palolem is excellent and low
-          cost. You can easily travel to The Intrepid from the Palolem airport
-          or railway station by bus or taxi. If you choose to use a taxi, it
-          will take you 10 minutes to reach the resort from the airport and 15
-          minutes from the railway station.
-        </p>
-        <h3>ADDRESS</h3>
-        <address>
-          The Intrepid <br />123 Adventure Boulevard <br />Palolem, India 403702
-          <br />
-          <a href="#">www.theintrepid.resort</a> <br />
-          <a href="tel:+16348555555">INTREPID.555.555</a> <br />
-          <a href="mailto:contact@threintrepid.resort"
-            >contact@threintrepid.resort</a
-          >
-        </address>
-        <h3>VENUE FEATURES</h3>
-        <div class="features">
-          <div class="feature1">
-            <img src="" alt="" />
-            <p>Lodging</p>
-          </div>
-          <div class="feature2">
-            <img src="" alt="" />
-            <p>Catering</p>
-          </div>
-          <div class="feature3">
-            <img src="" alt="" />
-            <p>Conferencing</p>
-          </div>
-          <div class="feature4">
-            <img src="" alt="" />
-            <p>Recreation</p>
-          </div>
-        </div>
-        <button>Get tickets</button>
-      </section>
-      <section class="section4">
         <section class="about-trainers-talk">
           <h2>The Trainers Talk Program</h2>
           <p>
             Our Trainers Talk program is meant to select speakers for each
             conference organized by THC. According to the guidelines of this
-            program, up to 2 industry experts can be chosen by THC directly. The
-            other speakers must be selected from among paying participants,
+            program, up to two industry experts can be chosen by THC directly.
+            The other speakers must be selected from among paying participants,
             based on their speaking proposals for predefined topics and a
             subsequent ballot.
           </p>
-          <button>Participate in Trainers Talk</button>
+          <div class="button-container">
+            <a class="link-button participate-trainers-talk" href="">
+              <span class="training-icon"></span>
+              <span>Participate in Trainers Talk</span>
+            </a>
+          </div>
         </section>
       </section>
     </main>
     <footer>
-      <div class="logo-large">
-        <p>#Huddle1</p>
-        <img src="img/huddle_plain.png" alt="The Huddle1 logo" />
-        <p>Let us unite</p>
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer-logo__container nav-container">
+            <div class="logo-container">
+              <a href="">
+                <div class="logo">
+                  <p>#Huddle1</p>
+                  <img
+                    src="img/huddle_whiter.png"
+                    alt="The Huddle1 logo"
+                    class="logo-general"
+                  />
+                  <p>Let us unite</p>
+                  <div class="border border-bottom-left"></div>
+                  <div class="border border-bottom-right"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="footer__location">
+            <p><a href="#">December 21&ndash;23, 2018</a></p>
+            <p><a href="#">The Intrepid, Palolem, India</a></p>
+          </div>
+          <nav class="footer__nav">
+            <ul>
+              <li><a href="">Get tickets</a></li>
+              <li><a href="">Speak for us</a></li>
+              <li><a href="">Sponsor us</a></li>
+              <li><a href="">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="footer__credits">
+            <small>
+              <a href="https://github.com/tshambhavi"
+                >Designed, written, and coded by Shambhavi</a
+              >
+            </small>
+            <small
+              ><a href="https://addconf.com/2018/"
+                >Design inspiration from ADDC</a
+              >
+            </small>
+            <small><a href="https://icons8.com">Icons from Icons8</a></small>
+          </div>
+        </div>
       </div>
-      <p>December 21&ndash;23, 2018</p>
-      <p><a href="#">The Intrepid</a>, Palolem, India</p>
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="">Get tickets</a></li>
-          <li><a href="">Speak for us</a></li>
-          <li><a href="">Sponsor us</a></li>
-          <li><a href="">Contact us</a></li>
-        </ul>
-      </nav>
-      <div class="credits">
-        <small
-          >Designed, written, and coded by
-          <strong>
-            <a href="https://github.com/tshambhavi">Shambhavi</a>
-          </strong>
-        </small>
-        <small
-          >Design inspiration from
-          <strong> <a href="https://addconf.com/2018/">ADDC</a> </strong>
-        </small>
-      </div>
+      <div class="footer__geometric"></div>
     </footer>
+
+    <!-- <div class="footer__rectangle"></div> -->
     <script src="js/script.js"></script>
   </body>
 </html>
