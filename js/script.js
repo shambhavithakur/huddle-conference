@@ -87,7 +87,7 @@ function fixedNav() {
 
 window.addEventListener('scroll', fixedNav);
 
-// Replace animation with static elements when user begins to scroll.
+// Replace animation with static elements the moment the user scrolls beyond a specific point.
 function noAnimationAfterScroll(){
     var presentPosition = window.pageYOffset;
     if (presentPosition > 500){
