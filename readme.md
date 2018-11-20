@@ -1,1 +1,1 @@
-A conference website that I code to practice using some CSS techniques
+A conference website that I coded to practice using some CSS techniques
